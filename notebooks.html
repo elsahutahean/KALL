@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -353,7 +353,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -369,6 +371,26 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-satu-solusi-solusi-unik"><strong>1. Kasus Satu Solusi (Solusi Unik)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-eliminasi-gauss"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-tak-hingga-solusi"><strong>2. Kasus Tak Hingga Solusi</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-tanpa-solusi"><strong>3. Kasus Tanpa Solusi</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-hasil"><strong>Ringkasan Hasil</strong></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -398,6 +420,200 @@ Sesuai dengan namanya , Persamaan Linear Dua Variabel merupakan sistem persamaan
 <li><p>Persamaan Linear Tiga Variabel
 Persamaan linear tiga variabel merupakan bentuk perluasan dari persamaan linear dua variabel. Sama seperti persamaan dua variabel linier, persamaan ini juga dapat diselesaikan dengan dua metode, yaitu substitusi dan eliminasi.</p></li>
 </ol>
+<hr class="docutils" />
+<p>title: Untitled</p>
+<hr class="docutils" />
+<p>Berikut adalah penyelesaian sistem persamaan linear tiga variabel menggunakan metode eliminasi Gauss dengan format yang lebih rapi dan mudah dipahami.</p>
+<hr class="docutils" />
+<section id="kasus-satu-solusi-solusi-unik">
+<h2><strong>1. Kasus Satu Solusi (Solusi Unik)</strong><a class="headerlink" href="#kasus-satu-solusi-solusi-unik" title="Link to this heading">#</a></h2>
+<p>Diketahui sistem persamaan:<br />
+[
+\begin{aligned}
+x + y + z &amp;= 6 \
+2x + 3y + z &amp;= 14 \
+y + 2z &amp;= 8
+\end{aligned}
+]</p>
+<p>Konversi ke matriks augmented:<br />
+[
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+2 &amp; 3 &amp; 1 &amp; | 14 \
+0 &amp; 1 &amp; 2 &amp; | 8
+\end{bmatrix}
+]</p>
+<section id="langkah-langkah-eliminasi-gauss">
+<h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#langkah-langkah-eliminasi-gauss" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Eliminasi elemen di bawah pivot pertama (( x )):</p>
+<ul class="simple">
+<li><p>Baris 2 → Baris 2 - 2(Baris 1)</p></li>
+</ul>
+</li>
+</ol>
+<p>[
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+0 &amp; 1 &amp; -1 &amp; | 2 \
+0 &amp; 1 &amp; 2 &amp; | 8
+\end{bmatrix}
+]</p>
+<ol class="arabic simple" start="2">
+<li><p>Eliminasi elemen di bawah pivot kedua (( y )):</p>
+<ul class="simple">
+<li><p>Baris 3 → Baris 3 - Baris 2</p></li>
+</ul>
+</li>
+</ol>
+<p>[
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+0 &amp; 1 &amp; -1 &amp; | 2 \
+0 &amp; 0 &amp; 3 &amp; | 6
+\end{bmatrix}
+]</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Substitusi balik:</strong></p>
+<ul class="simple">
+<li><p>Dari baris ketiga: ( 3z = 6 \Rightarrow z = 2 )</p></li>
+<li><p>Dari baris kedua: ( y - 2 = 2 \Rightarrow y = 4 )</p></li>
+<li><p>Dari baris pertama: ( x + 4 + 2 = 6 \Rightarrow x = 0 )</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Hasil:</strong><br />
+[
+(x, y, z) = (0, 4, 2)
+]</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="kasus-tak-hingga-solusi">
+<h2><strong>2. Kasus Tak Hingga Solusi</strong><a class="headerlink" href="#kasus-tak-hingga-solusi" title="Link to this heading">#</a></h2>
+<p>Diketahui sistem persamaan:<br />
+[
+\begin{aligned}
+x + y + z &amp;= 6 \
+2x + 2y + 2z &amp;= 12 \
+3x + 3y + 3z &amp;= 18
+\end{aligned}
+]</p>
+<p>Konversi ke matriks augmented:<br />
+[
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+2 &amp; 2 &amp; 2 &amp; | 12 \
+3 &amp; 3 &amp; 3 &amp; | 18
+\end{bmatrix}
+]</p>
+<section id="id1">
+<h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Eliminasi elemen di bawah pivot pertama:</p>
+<ul class="simple">
+<li><p>Baris 2 → Baris 2 - 2(Baris 1)</p></li>
+<li><p>Baris 3 → Baris 3 - 3(Baris 1)</p></li>
+</ul>
+</li>
+</ol>
+<p>[
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+0 &amp; 0 &amp; 0 &amp; | 0 \
+0 &amp; 0 &amp; 0 &amp; | 0
+\end{bmatrix}
+]</p>
+<p>Karena ada <strong>baris nol sepenuhnya</strong>, sistem ini memiliki <strong>tak hingga banyak solusi</strong>.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Penyelesaian dalam bentuk parameter:</strong></p>
+<ul class="simple">
+<li><p>Misalkan ( z = t ) (variabel bebas)</p></li>
+<li><p>Dari baris pertama: ( x + y + t = 6 \Rightarrow x + y = 6 - t )</p></li>
+<li><p>Misalkan ( y = s ), maka ( x = 6 - s - t )</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Hasil (dalam bentuk parameter):</strong><br />
+[
+(x, y, z) = (6 - s - t, s, t), \quad s, t \in \mathbb{R}
+]</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="kasus-tanpa-solusi">
+<h2><strong>3. Kasus Tanpa Solusi</strong><a class="headerlink" href="#kasus-tanpa-solusi" title="Link to this heading">#</a></h2>
+<p>Diketahui sistem persamaan:<br />
+[
+\begin{aligned}
+x + y + z &amp;= 6 \
+2x + 3y + z &amp;= 14 \
+x + y + z &amp;= 8
+\end{aligned}
+]</p>
+<p>Konversi ke matriks augmented:<br />
+[
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+2 &amp; 3 &amp; 1 &amp; | 14 \
+1 &amp; 1 &amp; 1 &amp; | 8
+\end{bmatrix}
+]</p>
+<section id="id2">
+<h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Eliminasi elemen di bawah pivot pertama:</p>
+<ul class="simple">
+<li><p>Baris 3 → Baris 3 - Baris 1</p></li>
+</ul>
+</li>
+</ol>
+<p>[
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+2 &amp; 3 &amp; 1 &amp; | 14 \
+0 &amp; 0 &amp; 0 &amp; | 2
+\end{bmatrix}
+]</p>
+<p>Baris ketiga menyatakan <strong>0 = 2</strong>, yang merupakan <strong>kontradiksi</strong>.</p>
+<p><strong>Kesimpulan:</strong><br />
+Sistem ini <strong>tidak memiliki solusi</strong>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="ringkasan-hasil">
+<h2><strong>Ringkasan Hasil</strong><a class="headerlink" href="#ringkasan-hasil" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Jenis Solusi</p></th>
+<th class="head"><p>Bentuk Matriks Setelah Eliminasi</p></th>
+<th class="head"><p>Kesimpulan</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Satu Solusi</strong></p></td>
+<td><p>Pivot di setiap kolom variabel, tanpa kontradiksi</p></td>
+<td><p>( (x, y, z) ) unik</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tak Hingga Solusi</strong></p></td>
+<td><p>Baris nol sepenuhnya, ada variabel bebas</p></td>
+<td><p>Solusi berbentuk parameter</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Tanpa Solusi</strong></p></td>
+<td><p>Baris dengan ( 0 = c ) (( c \neq 0 ))</p></td>
+<td><p>Tidak ada solusi</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Metode eliminasi Gauss memudahkan kita dalam mengidentifikasi jenis solusi berdasarkan bentuk matriks setelah eliminasi.</p>
+<p>1.Solusi Tunggal
+<a class="reference external" href="https://www.geogebra.org/calculator/deekkbx3">https://www.geogebra.org/calculator/deekkbx3</a>
+2.Banyak Solusi
+<a class="reference external" href="https://www.geogebra.org/calculator/dnxnd3nh">https://www.geogebra.org/calculator/dnxnd3nh</a>
+3.Tanpa Solusi
+<a class="reference external" href="https://www.geogebra.org/calculator/rgjww8f">https://www.geogebra.org/calculator/rgjww8f</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -454,6 +670,33 @@ Persamaan linear tiga variabel merupakan bentuk perluasan dari persamaan linear 
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-satu-solusi-solusi-unik"><strong>1. Kasus Satu Solusi (Solusi Unik)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-eliminasi-gauss"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-tak-hingga-solusi"><strong>2. Kasus Tak Hingga Solusi</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-tanpa-solusi"><strong>3. Kasus Tanpa Solusi</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-hasil"><strong>Ringkasan Hasil</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
