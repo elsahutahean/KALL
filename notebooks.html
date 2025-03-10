@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -427,38 +429,40 @@ Persamaan linear tiga variabel merupakan bentuk perluasan dari persamaan linear 
 <hr class="docutils" />
 <section id="kasus-satu-solusi-solusi-unik">
 <h2><strong>1. Kasus Satu Solusi (Solusi Unik)</strong><a class="headerlink" href="#kasus-satu-solusi-solusi-unik" title="Link to this heading">#</a></h2>
-<p>Diketahui sistem persamaan:<br />
-[
+<p>Diketahui sistem persamaan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}   
 \begin{aligned}
-x + y + z &amp;= 6 \
-2x + 3y + z &amp;= 14 \
+x + y + z &amp;= 6 \\
+2x + 3y + z &amp;= 14 \\ 
 y + 2z &amp;= 8
 \end{aligned}
-]</p>
+\end{split}\]</div>
 <p>Konversi ke matriks augmented:<br />
-[
+$<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \
-2 &amp; 3 &amp; 1 &amp; | 14 \
-0 &amp; 1 &amp; 2 &amp; | 8
+1 &amp; 1 &amp; 1 &amp;  6 \\
+2 &amp; 3 &amp; 1 &amp;  14 \\
+0 &amp; 1 &amp; 2 &amp;  8
 \end{bmatrix}
-]</p>
+\)</span>$</p>
 <section id="langkah-langkah-eliminasi-gauss">
 <h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#langkah-langkah-eliminasi-gauss" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Eliminasi elemen di bawah pivot pertama (( x )):</p>
+<li><p>Eliminasi elemen di bawah pivot pertama ( x ):</p>
 <ul class="simple">
 <li><p>Baris 2 → Baris 2 - 2(Baris 1)</p></li>
 </ul>
 </li>
 </ol>
-<p>[
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \
-0 &amp; 1 &amp; -1 &amp; | 2 \
-0 &amp; 1 &amp; 2 &amp; | 8
+1 &amp; 1 &amp; 1 &amp; 6 \\
+0 &amp; 1 &amp; -1 &amp; 2 \\
+0 &amp; 1 &amp; 2 &amp; 8
 \end{bmatrix}
-]</p>
+\end{split}\]</div>
 <ol class="arabic simple" start="2">
 <li><p>Eliminasi elemen di bawah pivot kedua (( y )):</p>
 <ul class="simple">
@@ -466,47 +470,48 @@ y + 2z &amp;= 8
 </ul>
 </li>
 </ol>
-<p>[
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \
-0 &amp; 1 &amp; -1 &amp; | 2 \
-0 &amp; 0 &amp; 3 &amp; | 6
+1 &amp; 1 &amp; 1 &amp; 6 \\
+0 &amp; 1 &amp; -1 &amp; 2 \\
+0 &amp; 0 &amp; 3 &amp; 6
 \end{bmatrix}
-]</p>
+\end{split}\]</div>
 <ol class="arabic simple" start="3">
 <li><p><strong>Substitusi balik:</strong></p>
 <ul class="simple">
-<li><p>Dari baris ketiga: ( 3z = 6 \Rightarrow z = 2 )</p></li>
-<li><p>Dari baris kedua: ( y - 2 = 2 \Rightarrow y = 4 )</p></li>
-<li><p>Dari baris pertama: ( x + 4 + 2 = 6 \Rightarrow x = 0 )</p></li>
+<li><p>Dari baris ketiga: <span class="math notranslate nohighlight">\(( 3z = 6 \Rightarrow z = 2 )\)</span></p></li>
+<li><p>Dari baris kedua: <span class="math notranslate nohighlight">\(( y - 2 = 2 \Rightarrow y = 4 )\)</span></p></li>
+<li><p>Dari baris pertama: <span class="math notranslate nohighlight">\(( x + 4 + 2 = 6 \Rightarrow x = 0 )\)</span></p></li>
 </ul>
 </li>
 </ol>
 <p><strong>Hasil:</strong><br />
-[
+$<span class="math notranslate nohighlight">\(
 (x, y, z) = (0, 4, 2)
-]</p>
+\)</span>$</p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="kasus-tak-hingga-solusi">
 <h2><strong>2. Kasus Tak Hingga Solusi</strong><a class="headerlink" href="#kasus-tak-hingga-solusi" title="Link to this heading">#</a></h2>
 <p>Diketahui sistem persamaan:<br />
-[
+$<span class="math notranslate nohighlight">\(
 \begin{aligned}
-x + y + z &amp;= 6 \
-2x + 2y + 2z &amp;= 12 \
+x + y + z &amp;= 6 \\
+2x + 2y + 2z &amp;= 12 \\
 3x + 3y + 3z &amp;= 18
 \end{aligned}
-]</p>
+\)</span>$</p>
 <p>Konversi ke matriks augmented:<br />
-[
+$<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \
-2 &amp; 2 &amp; 2 &amp; | 12 \
-3 &amp; 3 &amp; 3 &amp; | 18
+1 &amp; 1 &amp; 1 &amp;  6 \\
+2 &amp; 2 &amp; 2 &amp;  12 \\
+3 &amp; 3 &amp; 3 &amp;  18
 \end{bmatrix}
-]</p>
+\)</span>$</p>
 <section id="id1">
 <h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -517,48 +522,49 @@ x + y + z &amp;= 6 \
 </ul>
 </li>
 </ol>
-<p>[
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \
-0 &amp; 0 &amp; 0 &amp; | 0 \
-0 &amp; 0 &amp; 0 &amp; | 0
+1 &amp; 1 &amp; 1 &amp;  6 \\
+0 &amp; 0 &amp; 0 &amp;  0 \\
+0 &amp; 0 &amp; 0 &amp;  0
 \end{bmatrix}
-]</p>
+\end{split}\]</div>
 <p>Karena ada <strong>baris nol sepenuhnya</strong>, sistem ini memiliki <strong>tak hingga banyak solusi</strong>.</p>
 <ol class="arabic simple" start="2">
 <li><p><strong>Penyelesaian dalam bentuk parameter:</strong></p>
 <ul class="simple">
-<li><p>Misalkan ( z = t ) (variabel bebas)</p></li>
-<li><p>Dari baris pertama: ( x + y + t = 6 \Rightarrow x + y = 6 - t )</p></li>
-<li><p>Misalkan ( y = s ), maka ( x = 6 - s - t )</p></li>
+<li><p>Misalkan <span class="math notranslate nohighlight">\(( z = t )\)</span> (variabel bebas)</p></li>
+<li><p>Dari baris pertama: <span class="math notranslate nohighlight">\(( x + y + t = 6 \Rightarrow x + y = 6 - t )\)</span></p></li>
+<li><p>Misalkan <span class="math notranslate nohighlight">\(( y = s ), maka ( x = 6 - s - t )\)</span></p></li>
 </ul>
 </li>
 </ol>
 <p><strong>Hasil (dalam bentuk parameter):</strong><br />
-[
+$<span class="math notranslate nohighlight">\(
 (x, y, z) = (6 - s - t, s, t), \quad s, t \in \mathbb{R}
-]</p>
+\)</span>$</p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="kasus-tanpa-solusi">
 <h2><strong>3. Kasus Tanpa Solusi</strong><a class="headerlink" href="#kasus-tanpa-solusi" title="Link to this heading">#</a></h2>
 <p>Diketahui sistem persamaan:<br />
-[
+$<span class="math notranslate nohighlight">\(
 \begin{aligned}
-x + y + z &amp;= 6 \
-2x + 3y + z &amp;= 14 \
+x + y + z &amp;= 6 \\
+2x + 3y + z &amp;= 14 \\
 x + y + z &amp;= 8
 \end{aligned}
-]</p>
+\)</span>$</p>
 <p>Konversi ke matriks augmented:<br />
-[
+$<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \
-2 &amp; 3 &amp; 1 &amp; | 14 \
-1 &amp; 1 &amp; 1 &amp; | 8
+1 &amp; 1 &amp; 1 &amp;  6 \\
+2 &amp; 3 &amp; 1 &amp;  14 \\
+1 &amp; 1 &amp; 1 &amp;  8
 \end{bmatrix}
-]</p>
+\)</span>$</p>
 <section id="id2">
 <h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -568,13 +574,14 @@ x + y + z &amp;= 8
 </ul>
 </li>
 </ol>
-<p>[
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \
-2 &amp; 3 &amp; 1 &amp; | 14 \
-0 &amp; 0 &amp; 0 &amp; | 2
+1 &amp; 1 &amp; 1 &amp;  6 \\
+2 &amp; 3 &amp; 1 &amp;  14 \\
+0 &amp; 0 &amp; 0 &amp;  2
 \end{bmatrix}
-]</p>
+\end{split}\]</div>
 <p>Baris ketiga menyatakan <strong>0 = 2</strong>, yang merupakan <strong>kontradiksi</strong>.</p>
 <p><strong>Kesimpulan:</strong><br />
 Sistem ini <strong>tidak memiliki solusi</strong>.</p>
@@ -593,14 +600,14 @@ Sistem ini <strong>tidak memiliki solusi</strong>.</p>
 <tbody>
 <tr class="row-even"><td><p><strong>Satu Solusi</strong></p></td>
 <td><p>Pivot di setiap kolom variabel, tanpa kontradiksi</p></td>
-<td><p>( (x, y, z) ) unik</p></td>
+<td><p>( (x, y, z) )unik</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Tak Hingga Solusi</strong></p></td>
 <td><p>Baris nol sepenuhnya, ada variabel bebas</p></td>
 <td><p>Solusi berbentuk parameter</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Tanpa Solusi</strong></p></td>
-<td><p>Baris dengan ( 0 = c ) (( c \neq 0 ))</p></td>
+<td><p>Baris dengan ( 0 = c ) (c tidak sama dengan 0)</p></td>
 <td><p>Tidak ada solusi</p></td>
 </tr>
 </tbody>
@@ -608,10 +615,10 @@ Sistem ini <strong>tidak memiliki solusi</strong>.</p>
 </div>
 <p>Metode eliminasi Gauss memudahkan kita dalam mengidentifikasi jenis solusi berdasarkan bentuk matriks setelah eliminasi.</p>
 <p>1.Solusi Tunggal
-<a class="reference external" href="https://www.geogebra.org/calculator/deekkbx3">https://www.geogebra.org/calculator/deekkbx3</a>
-2.Banyak Solusi
-<a class="reference external" href="https://www.geogebra.org/calculator/dnxnd3nh">https://www.geogebra.org/calculator/dnxnd3nh</a>
-3.Tanpa Solusi
+<a class="reference external" href="https://www.geogebra.org/calculator/deekkbx3">https://www.geogebra.org/calculator/deekkbx3</a></p>
+<p>2.Banyak Solusi
+<a class="reference external" href="https://www.geogebra.org/calculator/dnxnd3nh">https://www.geogebra.org/calculator/dnxnd3nh</a></p>
+<p>3.Tanpa Solusi
 <a class="reference external" href="https://www.geogebra.org/calculator/rgjww8f">https://www.geogebra.org/calculator/rgjww8f</a></p>
 </section>
 </section>
