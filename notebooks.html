@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sistem Persamaan Linier &#8212; My sample book</title>
+    <title>Langkah 1: Representasi Matriks &#8212; My sample book</title>
   
   
   
@@ -182,7 +182,11 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sistem Persamaan Linier</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em>Langkah 1: Representasi Matriks</em></a></li>
+
+
+
+
 </ul>
 
     </div>
@@ -368,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sistem Persamaan Linier</h1>
+    <h1>Langkah 1: Representasi Matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,20 +382,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-satu-solusi-solusi-unik"><strong>1. Kasus Satu Solusi (Solusi Unik)</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-eliminasi-gauss"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Langkah 1: Representasi Matriks</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-eliminasi-gauss"><em>Langkah 2: Eliminasi Gauss</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-normalisasi-dan-eliminasi-lanjutan"><em>Langkah 3: Normalisasi dan Eliminasi Lanjutan</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-substitusi-balik"><em>Langkah 4: Substitusi Balik</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><em>Kesimpulan:</em></a></li>
 </ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-tak-hingga-solusi"><strong>2. Kasus Tak Hingga Solusi</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-tanpa-solusi"><strong>3. Kasus Tanpa Solusi</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-hasil"><strong>Ringkasan Hasil</strong></a></li>
-</ul>
+
             </nav>
         </div>
     </div>
@@ -402,8 +399,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
-<h1>Sistem Persamaan Linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
+  <p>Sistem Persamaan Linier</p>
 <p>Pengertian Dasar Sistem persamaan linear adalah kumpulan dari dua atau lebih persamaan yang memiliki variabel yang sama. Tujuannya adalah mencari nilai
 variabel-variabel tersebut sehingga semua persamaan dalam sistem tersebut terpenuhi.
 Sifat Persamaan Linear
@@ -423,12 +419,9 @@ Sesuai dengan namanya , Persamaan Linear Dua Variabel merupakan sistem persamaan
 Persamaan linear tiga variabel merupakan bentuk perluasan dari persamaan linear dua variabel. Sama seperti persamaan dua variabel linier, persamaan ini juga dapat diselesaikan dengan dua metode, yaitu substitusi dan eliminasi.</p></li>
 </ol>
 <hr class="docutils" />
-<p>title: Untitled</p>
-<hr class="docutils" />
 <p>Berikut adalah penyelesaian sistem persamaan linear tiga variabel menggunakan metode eliminasi Gauss dengan format yang lebih rapi dan mudah dipahami.</p>
 <hr class="docutils" />
-<section id="kasus-satu-solusi-solusi-unik">
-<h2><strong>1. Kasus Satu Solusi (Solusi Unik)</strong><a class="headerlink" href="#kasus-satu-solusi-solusi-unik" title="Link to this heading">#</a></h2>
+<p><strong>1. Kasus Satu Solusi (Solusi Unik)</strong></p>
 <p>Diketahui sistem persamaan:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}   
@@ -438,16 +431,16 @@ x + y + z &amp;= 6 \\
 y + 2z &amp;= 8
 \end{aligned}
 \end{split}\]</div>
-<p>Konversi ke matriks augmented:<br />
-$<span class="math notranslate nohighlight">\(
+<p>Konversi ke matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 1 &amp; 1 &amp; 1 &amp;  6 \\
 2 &amp; 3 &amp; 1 &amp;  14 \\
 0 &amp; 1 &amp; 2 &amp;  8
 \end{bmatrix}
-\)</span>$</p>
-<section id="langkah-langkah-eliminasi-gauss">
-<h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#langkah-langkah-eliminasi-gauss" title="Link to this heading">#</a></h3>
+\end{split}\]</div>
+<p><strong>Langkah-langkah Eliminasi Gauss:</strong></p>
 <ol class="arabic simple">
 <li><p>Eliminasi elemen di bawah pivot pertama ( x ):</p>
 <ul class="simple">
@@ -487,33 +480,29 @@ $<span class="math notranslate nohighlight">\(
 </ul>
 </li>
 </ol>
-<p><strong>Hasil:</strong><br />
-$<span class="math notranslate nohighlight">\(
-(x, y, z) = (0, 4, 2)
-\)</span>$</p>
-</section>
-</section>
+<p><strong>Hasil:</strong></p>
+<p>(x, y, z) = (0, 4, 2)</p>
 <hr class="docutils" />
-<section id="kasus-tak-hingga-solusi">
-<h2><strong>2. Kasus Tak Hingga Solusi</strong><a class="headerlink" href="#kasus-tak-hingga-solusi" title="Link to this heading">#</a></h2>
-<p>Diketahui sistem persamaan:<br />
-$<span class="math notranslate nohighlight">\(
+<p><strong>2. Kasus Tak Hingga Solusi</strong></p>
+<p>Diketahui sistem persamaan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
 x + y + z &amp;= 6 \\
 2x + 2y + 2z &amp;= 12 \\
 3x + 3y + 3z &amp;= 18
 \end{aligned}
-\)</span>$</p>
-<p>Konversi ke matriks augmented:<br />
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Konversi ke matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 1 &amp; 1 &amp; 1 &amp;  6 \\
 2 &amp; 2 &amp; 2 &amp;  12 \\
 3 &amp; 3 &amp; 3 &amp;  18
 \end{bmatrix}
-\)</span>$</p>
-<section id="id1">
-<h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+\end{split}\]</div>
+<p><strong>Langkah-langkah Eliminasi Gauss:</strong></p>
 <ol class="arabic simple">
 <li><p>Eliminasi elemen di bawah pivot pertama:</p>
 <ul class="simple">
@@ -540,33 +529,32 @@ $<span class="math notranslate nohighlight">\(
 </ul>
 </li>
 </ol>
-<p><strong>Hasil (dalam bentuk parameter):</strong><br />
-$<span class="math notranslate nohighlight">\(
+<p><strong>Hasil (dalam bentuk parameter):</strong></p>
+<div class="math notranslate nohighlight">
+\[
 (x, y, z) = (6 - s - t, s, t), \quad s, t \in \mathbb{R}
-\)</span>$</p>
-</section>
-</section>
+\]</div>
 <hr class="docutils" />
-<section id="kasus-tanpa-solusi">
-<h2><strong>3. Kasus Tanpa Solusi</strong><a class="headerlink" href="#kasus-tanpa-solusi" title="Link to this heading">#</a></h2>
-<p>Diketahui sistem persamaan:<br />
-$<span class="math notranslate nohighlight">\(
+<p><strong>3. Kasus Tanpa Solusi</strong></p>
+<p>Diketahui sistem persamaan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
 x + y + z &amp;= 6 \\
 2x + 3y + z &amp;= 14 \\
 x + y + z &amp;= 8
 \end{aligned}
-\)</span>$</p>
-<p>Konversi ke matriks augmented:<br />
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Konversi ke matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 1 &amp; 1 &amp; 1 &amp;  6 \\
 2 &amp; 3 &amp; 1 &amp;  14 \\
 1 &amp; 1 &amp; 1 &amp;  8
 \end{bmatrix}
-\)</span>$</p>
-<section id="id2">
-<h3><strong>Langkah-langkah Eliminasi Gauss:</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+\end{split}\]</div>
+<p><strong>Langkah-langkah Eliminasi Gauss:</strong></p>
 <ol class="arabic simple">
 <li><p>Eliminasi elemen di bawah pivot pertama:</p>
 <ul class="simple">
@@ -585,11 +573,8 @@ $<span class="math notranslate nohighlight">\(
 <p>Baris ketiga menyatakan <strong>0 = 2</strong>, yang merupakan <strong>kontradiksi</strong>.</p>
 <p><strong>Kesimpulan:</strong><br />
 Sistem ini <strong>tidak memiliki solusi</strong>.</p>
-</section>
-</section>
 <hr class="docutils" />
-<section id="ringkasan-hasil">
-<h2><strong>Ringkasan Hasil</strong><a class="headerlink" href="#ringkasan-hasil" title="Link to this heading">#</a></h2>
+<p><strong>Ringkasan Hasil</strong></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Jenis Solusi</p></th>
@@ -620,7 +605,97 @@ Sistem ini <strong>tidak memiliki solusi</strong>.</p>
 <a class="reference external" href="https://www.geogebra.org/calculator/dnxnd3nh">https://www.geogebra.org/calculator/dnxnd3nh</a></p>
 <p>3.Tanpa Solusi
 <a class="reference external" href="https://www.geogebra.org/calculator/rgjww8f">https://www.geogebra.org/calculator/rgjww8f</a></p>
+<p>Tugas Menghitung Matriks Menjadi Matriks Invers :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x_1 + 2x_2 + 3x_3 = 1 \\
+4x_1 - x_2 + 2x_3 = 4 \\
+5x_1 + 3x_2 - x_3 = 5
+\end{cases}
+\end{split}\]</div>
+<p>Kita akan menyelesaikan sistem ini menggunakan metode eliminasi atau matriks. Mari kita hitung.</p>
+<section id="langkah-1-representasi-matriks">
+<h1><em>Langkah 1: Representasi Matriks</em><a class="headerlink" href="#langkah-1-representasi-matriks" title="Link to this heading">#</a></h1>
+<p>Kita tulis dalam bentuk matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 
+1 &amp; 2 &amp; 3 &amp; | 1 \\ 
+4 &amp; -1 &amp; 2 &amp; | 4 \\ 
+5 &amp; 3 &amp; -1 &amp; | 5 
+\end{bmatrix}
+\end{split}\]</div>
 </section>
+<section id="langkah-2-eliminasi-gauss">
+<h1><em>Langkah 2: Eliminasi Gauss</em><a class="headerlink" href="#langkah-2-eliminasi-gauss" title="Link to this heading">#</a></h1>
+<p>Kita buat elemen pertama kolom pertama menjadi 1 (sudah 1, jadi lanjut ke eliminasi di bawahnya).</p>
+<ul class="simple">
+<li><p>Eliminasi baris kedua: <span class="math notranslate nohighlight">\(( R_2 \leftarrow R_2 - 4R_1 )\)</span></p></li>
+<li><p>Eliminasi baris ketiga: <span class="math notranslate nohighlight">\(( R_3 \leftarrow R_3 - 5R_1 )\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 
+1 &amp; 2 &amp; 3 &amp; | 1 \\ 
+0 &amp; -9 &amp; -10 &amp; | 0 \\ 
+0 &amp; -7 &amp; -16 &amp; | 0 
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="langkah-3-normalisasi-dan-eliminasi-lanjutan">
+<h1><em>Langkah 3: Normalisasi dan Eliminasi Lanjutan</em><a class="headerlink" href="#langkah-3-normalisasi-dan-eliminasi-lanjutan" title="Link to this heading">#</a></h1>
+<p>Bagi baris kedua dengan -9 untuk membuat elemen tengah menjadi 1:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 
+1 &amp; 2 &amp; 3 &amp; | 1 \\ 
+0 &amp; 1 &amp; \frac{10}{9} &amp; | 0 \\ 
+0 &amp; -7 &amp; -16 &amp; | 0 
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Eliminasi elemen di bawah dan atas <span class="math notranslate nohighlight">\(( x_2 )\)</span>:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(( R_3 \leftarrow R_3 + 7 R_2 )\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(( R_1 \leftarrow R_1 - 2 R_2 )\)</span></p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 
+1 &amp; 0 &amp; \frac{7}{9} &amp; | 1 \\ 
+0 &amp; 1 &amp; \frac{10}{9} &amp; | 0 \\ 
+0 &amp; 0 &amp; \frac{2}{9} &amp; | 0 
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="langkah-4-substitusi-balik">
+<h1><em>Langkah 4: Substitusi Balik</em><a class="headerlink" href="#langkah-4-substitusi-balik" title="Link to this heading">#</a></h1>
+<p>Dari persamaan ketiga:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{2}{9} x_3 = 0 \Rightarrow x_3 = 0
+\]</div>
+<p>Dari persamaan kedua:</p>
+<div class="math notranslate nohighlight">
+\[
+x_2 + \frac{10}{9} (0) = 0 \Rightarrow x_2 = 0
+\]</div>
+<p>Dari persamaan pertama:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + \frac{7}{9} (0) = 1 \Rightarrow x_1 = 1
+\]</div>
+</section>
+<section id="kesimpulan">
+<h1><em>Kesimpulan:</em><a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[
+(x_1, x_2, x_3) = (1, 0, 0)
+\]</div>
+<p>Jadi, solusi sistem persamaan ini adalah <em><span class="math notranslate nohighlight">\(( (1, 0, 0) )\)</span></em>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -687,20 +762,13 @@ Sistem ini <strong>tidak memiliki solusi</strong>.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-satu-solusi-solusi-unik"><strong>1. Kasus Satu Solusi (Solusi Unik)</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-eliminasi-gauss"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Langkah 1: Representasi Matriks</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-eliminasi-gauss"><em>Langkah 2: Eliminasi Gauss</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-normalisasi-dan-eliminasi-lanjutan"><em>Langkah 3: Normalisasi dan Eliminasi Lanjutan</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-substitusi-balik"><em>Langkah 4: Substitusi Balik</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><em>Kesimpulan:</em></a></li>
 </ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-tak-hingga-solusi"><strong>2. Kasus Tak Hingga Solusi</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kasus-tanpa-solusi"><strong>3. Kasus Tanpa Solusi</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Langkah-langkah Eliminasi Gauss:</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-hasil"><strong>Ringkasan Hasil</strong></a></li>
-</ul>
+
   </nav></div>
 
 </div></div>
