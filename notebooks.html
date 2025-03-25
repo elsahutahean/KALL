@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Langkah 1: Representasi Matriks &#8212; My sample book</title>
+    <title>Penyelesaian dengan Metode Invers Matriks &#8212; My sample book</title>
   
   
   
@@ -182,11 +182,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em>Langkah 1: Representasi Matriks</em></a></li>
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em>Penyelesaian dengan Metode Invers Matriks</em></a></li>
 </ul>
 
     </div>
@@ -372,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Langkah 1: Representasi Matriks</h1>
+    <h1>Penyelesaian dengan Metode Invers Matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,13 +378,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Langkah 1: Representasi Matriks</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-eliminasi-gauss"><em>Langkah 2: Eliminasi Gauss</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-normalisasi-dan-eliminasi-lanjutan"><em>Langkah 3: Normalisasi dan Eliminasi Lanjutan</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-substitusi-balik"><em>Langkah 4: Substitusi Balik</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><em>Kesimpulan:</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-matriks-a"><em>1. Mencari Invers Matriks <span class="math notranslate nohighlight">\(( A )\)</span></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><em>Kesimpulan</em></a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -605,97 +597,79 @@ Sistem ini <strong>tidak memiliki solusi</strong>.</p>
 <a class="reference external" href="https://www.geogebra.org/calculator/dnxnd3nh">https://www.geogebra.org/calculator/dnxnd3nh</a></p>
 <p>3.Tanpa Solusi
 <a class="reference external" href="https://www.geogebra.org/calculator/rgjww8f">https://www.geogebra.org/calculator/rgjww8f</a></p>
-<p>Tugas Menghitung Matriks Menjadi Matriks Invers :</p>
+<section id="penyelesaian-dengan-metode-invers-matriks">
+<h1><em>Penyelesaian dengan Metode Invers Matriks</em><a class="headerlink" href="#penyelesaian-dengan-metode-invers-matriks" title="Link to this heading">#</a></h1>
+<p>Diberikan sistem persamaan linear:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{cases}
-x_1 + 2x_2 + 3x_3 = 1 \\
-4x_1 - x_2 + 2x_3 = 4 \\
-5x_1 + 3x_2 - x_3 = 5
-\end{cases}
+\begin{aligned}
+x_1 + 2x_2 + 3x_3 &amp;= 1 \\
+4x_1 - x_2 + 2x_3 &amp;= 4 \\
+5x_1 + 3x_2 - x_3 &amp;= 5
+\end{aligned}
 \end{split}\]</div>
-<p>Kita akan menyelesaikan sistem ini menggunakan metode eliminasi atau matriks. Mari kita hitung.</p>
-<section id="langkah-1-representasi-matriks">
-<h1><em>Langkah 1: Representasi Matriks</em><a class="headerlink" href="#langkah-1-representasi-matriks" title="Link to this heading">#</a></h1>
-<p>Kita tulis dalam bentuk matriks augmented:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 
-1 &amp; 2 &amp; 3 &amp; | 1 \\ 
-4 &amp; -1 &amp; 2 &amp; | 4 \\ 
-5 &amp; 3 &amp; -1 &amp; | 5 
-\end{bmatrix}
-\end{split}\]</div>
-</section>
-<section id="langkah-2-eliminasi-gauss">
-<h1><em>Langkah 2: Eliminasi Gauss</em><a class="headerlink" href="#langkah-2-eliminasi-gauss" title="Link to this heading">#</a></h1>
-<p>Kita buat elemen pertama kolom pertama menjadi 1 (sudah 1, jadi lanjut ke eliminasi di bawahnya).</p>
-<ul class="simple">
-<li><p>Eliminasi baris kedua: <span class="math notranslate nohighlight">\(( R_2 \leftarrow R_2 - 4R_1 )\)</span></p></li>
-<li><p>Eliminasi baris ketiga: <span class="math notranslate nohighlight">\(( R_3 \leftarrow R_3 - 5R_1 )\)</span></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 
-1 &amp; 2 &amp; 3 &amp; | 1 \\ 
-0 &amp; -9 &amp; -10 &amp; | 0 \\ 
-0 &amp; -7 &amp; -16 &amp; | 0 
-\end{bmatrix}
-\end{split}\]</div>
-</section>
-<section id="langkah-3-normalisasi-dan-eliminasi-lanjutan">
-<h1><em>Langkah 3: Normalisasi dan Eliminasi Lanjutan</em><a class="headerlink" href="#langkah-3-normalisasi-dan-eliminasi-lanjutan" title="Link to this heading">#</a></h1>
-<p>Bagi baris kedua dengan -9 untuk membuat elemen tengah menjadi 1:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 
-1 &amp; 2 &amp; 3 &amp; | 1 \\ 
-0 &amp; 1 &amp; \frac{10}{9} &amp; | 0 \\ 
-0 &amp; -7 &amp; -16 &amp; | 0 
-\end{bmatrix}
-\end{split}\]</div>
-<ul class="simple">
-<li><p>Eliminasi elemen di bawah dan atas <span class="math notranslate nohighlight">\(( x_2 )\)</span>:</p>
-<ul>
-<li><p><span class="math notranslate nohighlight">\(( R_3 \leftarrow R_3 + 7 R_2 )\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(( R_1 \leftarrow R_1 - 2 R_2 )\)</span></p></li>
-</ul>
-</li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 
-1 &amp; 0 &amp; \frac{7}{9} &amp; | 1 \\ 
-0 &amp; 1 &amp; \frac{10}{9} &amp; | 0 \\ 
-0 &amp; 0 &amp; \frac{2}{9} &amp; | 0 
-\end{bmatrix}
-\end{split}\]</div>
-</section>
-<section id="langkah-4-substitusi-balik">
-<h1><em>Langkah 4: Substitusi Balik</em><a class="headerlink" href="#langkah-4-substitusi-balik" title="Link to this heading">#</a></h1>
-<p>Dari persamaan ketiga:</p>
+<p>Kita tuliskan dalam bentuk matriks:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{2}{9} x_3 = 0 \Rightarrow x_3 = 0
+A \mathbf{x} = \mathbf{b}
 \]</div>
-<p>Dari persamaan kedua:</p>
+<p>dengan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; -1 &amp; 2 \\
+5 &amp; 3 &amp; -1
+\end{bmatrix}, \quad
+\mathbf{x} =
+\begin{bmatrix}
+x_1 \\ x_2 \\ x_3
+\end{bmatrix}, \quad
+\mathbf{b} =
+\begin{bmatrix}
+1 \\ 4 \\ 5
+\end{bmatrix}
+\end{split}\]</div>
+<p>Karena <span class="math notranslate nohighlight">\(( A )\)</span> memiliki invers, kita dapat mencari solusi dengan:</p>
 <div class="math notranslate nohighlight">
 \[
-x_2 + \frac{10}{9} (0) = 0 \Rightarrow x_2 = 0
+\mathbf{x} = A^{-1} \mathbf{b}
 \]</div>
-<p>Dari persamaan pertama:</p>
+<section id="mencari-invers-matriks-a">
+<h2><em>1. Mencari Invers Matriks <span class="math notranslate nohighlight">\(( A )\)</span></em><a class="headerlink" href="#mencari-invers-matriks-a" title="Link to this heading">#</a></h2>
+<p>Kita hitung invers dari <span class="math notranslate nohighlight">\(( A )\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Hasil perhitungan menunjukkan bahwa solusi sistem persamaan adalah:</p>
 <div class="math notranslate nohighlight">
 \[
-x_1 + \frac{7}{9} (0) = 1 \Rightarrow x_1 = 1
+x_1 = 1, \quad x_2 \approx -8.33 \times 10^{-17}, \quad x_3 \approx -2.78 \times 10^{-17}
 \]</div>
-</section>
-<section id="kesimpulan">
-<h1><em>Kesimpulan:</em><a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h1>
+<p>Nilai <span class="math notranslate nohighlight">\(( x_2 )\)</span> dan <span class="math notranslate nohighlight">\(( x_3 )\)</span> sangat kecil (mendekati nol), yang kemungkinan besar disebabkan oleh kesalahan pembulatan dalam perhitungan numerik. Jadi, solusi akhirnya adalah:</p>
 <div class="math notranslate nohighlight">
 \[
 (x_1, x_2, x_3) = (1, 0, 0)
 \]</div>
-<p>Jadi, solusi sistem persamaan ini adalah <em><span class="math notranslate nohighlight">\(( (1, 0, 0) )\)</span></em>.</p>
+</section>
+<section id="kesimpulan">
+<h2><em>Kesimpulan</em><a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>Sistem persamaan ini memiliki solusi unik:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} =
+\begin{bmatrix}
+1 \\ 0 \\ 0
+\end{bmatrix}
+\end{split}\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -762,13 +736,9 @@ x_1 + \frac{7}{9} (0) = 1 \Rightarrow x_1 = 1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Langkah 1: Representasi Matriks</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-eliminasi-gauss"><em>Langkah 2: Eliminasi Gauss</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-normalisasi-dan-eliminasi-lanjutan"><em>Langkah 3: Normalisasi dan Eliminasi Lanjutan</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-substitusi-balik"><em>Langkah 4: Substitusi Balik</em></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><em>Kesimpulan:</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-matriks-a"><em>1. Mencari Invers Matriks <span class="math notranslate nohighlight">\(( A )\)</span></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><em>Kesimpulan</em></a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
